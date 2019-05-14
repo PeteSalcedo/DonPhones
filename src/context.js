@@ -6,9 +6,9 @@ class ProductProvider extends Component {
     render(){
         return(
             
-                <ProductContext.provider value="hello from context">
+                <ProductContext.Provider value="hello from context">
                     {this.props.children}
-                </ProductContext.provider>
+                </ProductContext.Provider>
             
         )
     }
