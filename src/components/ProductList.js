@@ -16,14 +16,15 @@ class ProductList extends Component {
             <div className="py-5">
             <div className="container">
             <Title name="our" title="product"></Title>
-                <div className="row" />
+                <div className="row">
                 <ProductConsumer>
                     {(value)=> {
-                        return <h1>{value}</h1>
-
+                    return value.products.map(product => {
+                        return <Product key={product.id} product={product} />
+                    })
                     }}
                 </ProductConsumer>
-                
+                </div>
             </div>
             </div>
         </React.Fragment>
